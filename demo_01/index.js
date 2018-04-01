@@ -9,7 +9,7 @@ http.createServer((req, res) => {
                 res.end('Not found');
                 return;
             }
-            serve(__dirname + req.url, 'application/jpg');
+            serve(__dirname + req.url, 'image/jpeg');
         });
     } else if ('GET' == req.method && '/' == req.url) {
         serve(__dirname + '/index.html', 'text/html');
